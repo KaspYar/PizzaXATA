@@ -1,0 +1,45 @@
+﻿<div class="alert alert-danger" role="alert" ng-show="userId == 0">
+  Please, <a href="#/login" class="alert-link">sign in</a> first!
+</div>
+<div class="panel panel-default" ng-hide="userId == 0">
+    <!-- Default panel contents -->
+    <div class="panel-heading">All avaliable pizzas</div>
+    <div class="panel-body">
+        <form name="filterForm">
+            Search pizza by name:
+    <input ng-model="query" />
+            <p1 ng-hide="!query == ''">Page: <input type="number" name="pizzasCount" ng-model="pizzasCount" required min="1" max={{pages}} /></p1>
+            <div class="alert alert-danger" ng-show="filterForm.pizzasCount.$error.required">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                Page is required!
+            </div>
+            <div class="alert alert-danger" ng-show="filterForm.pizzasCount.$error.number">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                Page number is not valid!
+            </div>
+        </form>
+        <div class="alert alert-success" role="alert" ng-hide="success == ''">Pizza was successfully ordered</div>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <td><b>#</b></td>
+            <td><b>Pizza name</b></td>
+            <td><b>Ingridients</b></td>
+            <td><b>Price</b></td>
+            <td><b>Order</b></td>
+        </tr>
+        <tr ng-repeat="pizza in pizzas | filterAndReduce:pizzasCount:query">
+            <td>{{$index+1}}</td>
+            <td>{{pizza.name}}</td>
+            <td>{{pizza.ingridients}}</td>
+            <td>{{pizza.price}}$</td>
+            <td>
+                <button class="btn btn-sm btn-success" type="submit" ng-href='#here' ng-click="Order(pizza.id, userId)">Order</button></td>
+        </tr>
+    </table>
+</div>
+

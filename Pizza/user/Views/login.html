@@ -1,0 +1,9 @@
+﻿<div class="alert alert-success" role="alert" ng-hide="userId == 0">Hello, <b>{{userName}}</b>! Now you can order pizza and go to your cart</div>
+<form ng-show="userId == 0" class="form-signin">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <label for="inputText" class="sr-only">Username</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Username" ng-model="userName" required autofocus />
+    <label for="inputPassword" class="sr-only" >Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="password" required />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-href='#/cart' ng-click='go()'>Sign in</button>
+</form>

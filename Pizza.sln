@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "Pizza\Pizza.csproj", "{671078C3-1F5B-40ED-BB0E-1BBE44720B7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{671078C3-1F5B-40ED-BB0E-1BBE44720B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671078C3-1F5B-40ED-BB0E-1BBE44720B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671078C3-1F5B-40ED-BB0E-1BBE44720B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671078C3-1F5B-40ED-BB0E-1BBE44720B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

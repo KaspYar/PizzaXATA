@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico" />
+
+    <title>PizzaXATA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/style.css" rel="stylesheet" />
+    <link href="bootstrap/signin.css" rel="stylesheet"/>
+
+    <script src="../scripts/angular.js"></script>
+    <script src="../scripts/angular-route.js"></script>
+    <script src="../scripts/angular-animate.js"></script>
+    <script src="../scripts/angular-resource.js"></script>
+    <script src="js/PizzaControllers.js"></script>
+    <script src="js/Service.js"></script>
+    <script src="js/app.js"></script>    
+</head>
+<body ng-app="mainApp">
+    <div class="container">
+        <div class="header">
+            <nav ng-controller="MenuController">
+                <ul class="nav nav-pills pull-right">
+                    <li ng-hide="userId == 0" role="presentation"><a href="#/pizza">Make Order</a></li>
+                    <li ng-hide="userId == 0" role="presentation"><a href="#/cart">My cart</a></li>
+                    <li ng-hide="userId == 0" role="presentation"><button type="button" class="btn btn-warning" ng-click="signOut()">Sign Out</button></li>
+                    <li ng-show="userId == 0"role="presentation"><a href="#/login">Sign In</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">PizzaXATA</h3>
+        </div>
+        <div ng-view id="mainView"></div>
+        <footer class="footer">
+            <p>&copy; KaspYar 2015</p>
+        </footer>
+    </div>
+</body>
+</html>

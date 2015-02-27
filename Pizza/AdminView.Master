@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminView.master.cs" Inherits="Pizza.AdminView" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        </title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="mainlayout">
+
+<div id="nav">
+	<ul>
+		<li><a href="register.aspx">Registration</a></li>
+		<li><a href="user/helper.html#/login">Login as user</a></li>
+		<li><a href="pizzas.aspx">Pizzas list</a></li>	
+        <li><a href="orders.aspx">Orders</a></li>	
+	</ul>
+</div>
+<div id="infobox">
+
+  <div id="name">
+  <asp:ContentPlaceHolder ID="ContentPlaceHolderTab" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  </div>
+  
+  <div class="content">
+ 
+  <asp:ContentPlaceHolder ID="ContentPlaceHolderBase" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  </div>
+</div>
+<div id="copyright">&copy Slavko Kasprishin 2015</div>
+</div>
+    </form>
+</body>
+</html>
